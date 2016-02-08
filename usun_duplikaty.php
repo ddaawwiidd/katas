@@ -2,7 +2,7 @@
 /*
  * Napisz funkcję która pobiera tablicę i zwraca tablice w z usuniętymi duplikatami.
  *
- * Przykłady:
+ * Przykłady
  * findDuplicates([1,2, "jan", "kowlaski", 2, "jan"]) => [1,2, "jan", "kowlaski"]
  * findDuplicates([3.4, "jablko", 'banan', 'banan', "gruszka", 5]) => [3.4, "jablko", 'banan', "gruszka", 5]
  * findDuplicates([1,2, 3, "jablko", 'banan']) => [1,2, 3, "jablko", 'banan']

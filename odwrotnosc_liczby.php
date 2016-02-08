@@ -2,7 +2,7 @@
 /*
  * Napisz funkcje która będzie pobierać zmienną liczbową (całkowitą) a zwracać tablicę cyfr z których ta liczba się składa w odwrotnej kolejności
  *
- * Przykład:
+ * Przykład
  * revertNumber(1234) => [4,3,2,1]
  * revertNumber(1133112) => [2,1,1,3,3,1,1]
  */

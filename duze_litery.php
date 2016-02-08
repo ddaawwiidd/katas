@@ -2,7 +2,7 @@
 /*
  * Napisz funkcję która pobiera napis, a zwraca wszystkie pozycje (w postaci tabelki) na których w tym napisie wystepują duże litery (liczymi od 0!).
  *
- * Przykład:
+ * Przykład_:
  * findCapitals("Ala Ma Kota") => [0, 4, 7]
  * findCapitals("a kot ma ale") => []
  * findCapitals("Lubie PLACKI 7") => [0, 6,7,8,9,10,11]

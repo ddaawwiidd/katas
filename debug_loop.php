@@ -1,6 +1,6 @@
 <?php
 /*
- * Mamy funkcje która powinna generować tablicę z liczbami od 1 do n, gdzie n jest przyjmowana jako parametr.
+ * Mamy  funkcje która powinna generować tablicę z liczbami od 1 do n, gdzie n jest przyjmowana jako parametr.
  * Niestety w funkcj są błędy. Napraw je.
  */
 

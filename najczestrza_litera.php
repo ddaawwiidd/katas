@@ -12,9 +12,14 @@
 
 function mostOftenCharacter($sentence)
 {
-    //cut white signs from string
-    //turn sentence into array of each character
-    //look for repeating characters
+    $sentence = str_replace(' ','',$sentence);//cut white signs from string
+    $letters = str_split($sentence);//turn sentence into array of each character
+    $resultAlmost = array_count_values($letters);//look for repeating characters and how many times they occured
+    $maxLetter = max($resultAlmost);//looks for most repeated letter
+    $maxKey = array_search($maxLetter,$resultAlmost);//looks for key associated with that letter in array
+    $result = [$maxKey, $maxLetter];//creates result as an array
+    return $result;
+
 }
 
 

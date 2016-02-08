@@ -2,7 +2,7 @@
 /*
  * Napisz funkcję która pobiera napis, dzieli go na poszczególne słoa i zwraca napis składający się z tych słów w odwrotnej kolejności.
  *
- * Przykład
+ * Przykład:
  * wordBackwords("Ala ma kota") => "kota ma Ala"
  * wordBackwords("Jabłka pomarańcze gruszki") => "gruszki pomarańcze Jabłka"
  * wordBackwords("Lubie programować i rozwiązywać zadania") => "zadania rozwiązywać i programowac Lubie"

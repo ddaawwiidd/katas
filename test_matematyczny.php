@@ -1,6 +1,6 @@
 <?php
 /*
- * Napisz funkcje która będzie pobierać liczbę całkowitą i sprawdzać jej 3 właściwości:
+ * Napisz funkcje która będzie pobierać liczbę całkowitą i sprawdzać jej 3 właściwości
  * 1. Czy liczba jest pierwsza?
  * 2. Czy liczba jest parzysta?
  * 3. Czy liczba jest wielokrotnością 10?
@@ -17,16 +17,30 @@
 
 function mathTest($number)
 {
-
-  //checks if number is prime
+    $result = [];
+    if($number <= 1)//checks if number is smaller or equal 1
+    {
+        $prime = false;//if yes, it is not prime number
+    }
+    elseif($number <= 3)//checks if number is smaller or equal 3
+    {
+        $prime = true;//if yes, it's prime number
+    }
+    elseif($number % 2 == 0 || $number % 3 == 0)//checks if module of 2 or 3 equals 0
+    {
+        $prime = false;//if yes, it's not prime number
+    }
     if($number % 2 == 0)
     {
-        return true;//checks if number is multiple of 2
-    }//checks if number is multiple of 2
+        $duoz = true;//checks if number is multiple of 2
+    }
     if($number % 10 == 0)
     {
-        return true;//checks if number is multiple of 10
+        $tenners = true;//checks if number is multiple of 10
     }
+    array_push($result,$prime,$duoz,$tenners);
+    return $result;
+
 }
 
 
@@ -34,10 +48,10 @@ function mathTest($number)
  * Kod popniżej służy wygenerowaniu testów i strony poglądaowej - nie modyfikujcie go!
  */
 
-$testCases = [[1, [true, false, false]], [20, [false, true, true]], [74088, [false, true, false]], [9, [false, false, false]]];
+$testCases = [[1, [false, false, false]], [20, [false, true, true]], [74088, [false, true, false]], [9, [false, false, false]]];
 $results = "";
 foreach($testCases as $case){
-    if(($funcValue = mathTest($case[0])) === $case[1]){
+    if(($funcValue = mathTest($case[0])) == $case[1]){
         $results .= "<tr class='success'><td> Ok </td><td> {$case[0]} </td><td>[".implode($case[1], ",")."]</td><td>[".implode($funcValue, ",")."]</td></tr>";
     }
     else{

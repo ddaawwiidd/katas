@@ -1,6 +1,6 @@
 <?php
 /*
- * Podane są dwie funkcje:
+ * Podane są dwie funkcje :
  * ConvertToCelsius(farenheit) - funkcja która przyjmuje wartość temeratury w stopniach farenheita i zwraca w stopniach celciusza
  * WeatherInfo($temp) - funkcja która przyjmuje temperatuję w stopniach farenheita i wypisuje informaczje o temperaturze w stopniach celciusza i informacje o tym czy jest poniżej zera.
  *

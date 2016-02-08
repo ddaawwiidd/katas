@@ -2,7 +2,7 @@
 /*
  * Napisz funkcję która sprawdza czy słowo jest palindromem (funkcja ma nie zwracać uwagi na wielkosc liter). Ma zwracać wartość boolean.
  *
- * Przykłady
+ * Przykłady:
  * palindrom("ala") => true
  * palindrom("Ala") => true
  * palinfrom("pomarańcz") => false

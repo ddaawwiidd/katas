@@ -15,9 +15,37 @@
 
 
 
-function FindSlope()
+function FindSlope($a,$b,$c,$d)
 {
-
+    if(is_int($a) || is_float($a))//if $a variable is a float or int
+    {
+        if(is_int($b) || is_float($b))//if $b variable is a float or int
+        {
+            if(is_int($c) || is_float($c))//if $c variable is a float or int
+            {
+                if(is_int($d) || is_float($d))//if $d variable is a float or int
+                {
+                    $m = ($d - $b)/($c - $a);//calculate m
+                    if($m < 0)//return ujemna, dodatnia, zerowa, niezidentyfikowana
+                    {
+                        return "ujemna";
+                    }
+                    elseif($m > 0)
+                    {
+                        return "dodatnia";
+                    }
+                    elseif(($c - $a) == 0)
+                    {
+                        return "niezdefiniowana";
+                    }
+                    elseif($m == 0)
+                    {
+                        return "zerowa";
+                    }
+                }
+            }
+        }
+    }
 }
 
 

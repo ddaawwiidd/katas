@@ -1,6 +1,6 @@
 <?php
 /*
- * Napisz funkcję która pobiera napis, dzieli go na poszczególne słowa i zwraca tablice z tymi słowami rozszerzonymi o ich długość (pamiętaj oddzielić słowo i jego długość spacją).
+ * Napisz  funkcję która pobiera napis, dzieli go na poszczególne słowa i zwraca tablice z tymi słowami rozszerzonymi o ich długość (pamiętaj oddzielić słowo i jego długość spacją).
  *
  * Przykłady:
  * wordLength("Ala ma kota") => ["Ala 3", "ma 2", "kota 4"]
@@ -13,13 +13,14 @@
 function wordLength($sentence)
 {
     $temp = explode(' ',$sentence);//puts sentence into array
-    $tempNumber = [];
-    for($i = 0; $i < count($temp); $i++) //count number of letters in word
+    $result = [];
+    for($i = 0; $i < count($temp); $i++)
     {
-        strlen($temp[$i]);//
+        $num = $temp[$i].' '.strlen($temp[$i]);//count number of letters in word and adds it to new array with
+        array_push($result,$num);
     }
 
-    return //array with added length of words next to words
+    return $result;//array with added length of words next to words
 
 
 }
@@ -29,7 +30,7 @@ function wordLength($sentence)
  * Kod popniżej służy wygenerowaniu testów i strony poglądaowej - nie modyfikujcie go!
  */
 
-$testCases = [["", []],["Ala ma kota", ["Ala 3", "ma 2", "kota 4"]], ["Dlugosc slow ma znaczenie",  ["Dlugosc 7", "slow 4", "ma 2", "znaczenie 9"]], ["Lubie placki 7", ["Lubie 5", "placki 7", "7 1"]]];
+$testCases = [["", []],["Ala ma kota", ["Ala 3", "ma 2", "kota 4"]], ["Dlugosc slow ma znaczenie",  ["Dlugosc 7", "slow 4", "ma 2", "znaczenie 9"]], ["Lubie placki 7", ["Lubie 5", "placki 6", "7 1"]]];
 $results = "";
 foreach($testCases as $case){
     if(($funcValue = wordLength($case[0])) === $case[1]){

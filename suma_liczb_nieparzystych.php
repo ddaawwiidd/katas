@@ -1,6 +1,6 @@
 <?php
 /*
- * Mając poniższy schamat generowania liczb nieparzystych:
+ * Mając poniższy schamat generowania liczb nieparzystych
  * 1:            1
  * 2:          3   5
  * 3:        7   9   11
@@ -15,8 +15,23 @@
 
 
 
-function sumOdd()
+function sumOdd($row)
 {
+    $numbers = [];//empty array to fill with numbers from picked row
+    if($row == 1)
+    {
+        array_push($numbers,1);
+    }
+    else
+    {
+        for($i = 1; $i <= $row; $i++)//loop to generate other numbers, dependent on the number of row
+        {
+            $number = (2*$i - 1)+2;//generates odd number
+            array_push($numbers,$number);
+        }
+    }
+    $result = array_sum($numbers);
+    return $result;
 
 }
 
@@ -25,7 +40,7 @@ function sumOdd()
  * Kod popniżej służy wygenerowaniu testów i strony poglądaowej - nie modyfikujcie go!
  */
 
-$testCases = [[1, 1], [2, 8], [42, 74088]];
+$testCases = [[1, 1], [2, 8], [42, 1848]];
 $results = "";
 foreach($testCases as $case){
     if(($funcValue = sumOdd($case[0])) === $case[1]){

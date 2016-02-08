@@ -2,7 +2,7 @@
 /*
  * Napisz funkcję która wyliczy średnią arytmetyczną z wartości podanych w tablicy. Funkcja ma przyjmować tablicę z liczbami i zwracać ich średnią.
  *
- * Przykłady:
+ * Przykłady
  * arrayMean([1]) => 1
  * arrayMean([1,3,5,7]) => 4
  */

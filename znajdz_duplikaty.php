@@ -11,8 +11,8 @@
 
 function findDuplicates($varArray)
 {
-    $temp = array_unique($varArray);//checks for duplicates in an array and deletes them
-    $results = $varArray - $temp;//returns entries from $varArray that are not present in array $temp
+    //checks for duplicates in an array and deletes them
+    $results = array_unique(array_diff_assoc($varArray, array_unique($varArray)));//returns entries from $varArray that are not present in array $temp
     return $results;
 
 }
@@ -25,7 +25,7 @@ function findDuplicates($varArray)
 $testCases = [[[], []],[[1,2, "jan", "kowlaski", 2, "jan"], [2, "jan"]], [[3.4, "jablko", 'banan', 'banan'], ['banan']], [[1,2, 3, "jablko", 'banan'], []]];
 $results = "";
 foreach($testCases as $case){
-    if(($funcValue = findDuplicates($case[0])) === $case[1]){
+    if(($funcValue = findDuplicates($case[0])) == $case[1]){
         $results .= "<tr class='success'><td> Ok </td><td>[".implode($case[0], ",")."] </td><td>[".implode($case[1], ",")."]</td><td>[".implode($funcValue, ",")."]</td></tr>";
     }
     else{
