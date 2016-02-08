@@ -8,9 +8,26 @@
  * palinfrom("pomarańcz") => false
  */
 
+function palinfrom($word)
+{
 
+    if(ctype_alpha($word) == 1)
+    {
+        $temp = strtolower($word);
+        $wordReverse = strrev($temp);
+        if($temp == $wordReverse)
+        {
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+    else
+    {
+        return false;
+    }
 
-function palinfrom(){
 }
 
 
