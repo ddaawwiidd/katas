@@ -15,7 +15,9 @@
 
 
 
-function FindSlope(){
+function FindSlope()
+{
+
 }
 
 

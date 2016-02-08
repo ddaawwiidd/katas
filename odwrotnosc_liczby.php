@@ -9,7 +9,13 @@
 
 
 
-function revertNumber(){
+function revertNumber($number)
+{
+    $temp = strval($number);
+    $digits = str_split($temp,1);
+    $result = array_reverse($digits);
+    return $result;
+
 }
 
 
@@ -20,7 +26,7 @@ function revertNumber(){
 $testCases = [[1, [1]], [21, [1,2]], [74088, [8,8,0,4,7]], [5473241, [1,4,2,3,7,4,5]]];
 $results = "";
 foreach($testCases as $case){
-    if(($funcValue = revertNumber($case[0])) === $case[1]){
+    if(($funcValue = revertNumber($case[0])) == $case[1]){
         $results .= "<tr class='success'><td> Ok </td><td> {$case[0]} </td><td>[".implode($case[1], ",")."]</td><td>[".implode($funcValue, ",")."]</td></tr>";
     }
     else{

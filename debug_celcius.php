@@ -9,18 +9,18 @@
  */
 
 function ConvertToCelsius($temperature) {
-    $celsius = ($tempertur) - 32 + (5 / 9);
-    return $temperature;
+    $celsius = (($temperature) - 32) / 1.8;
+    return $celsius;
 }
 
 
 function WeatherInfo($temp){
-    c : ConvertToCelsius(temp);
-    if (c > 0) {
-        return (c + " is freezing temperature");
+    $c = ConvertToCelsius($temp);
+    if ($c > 0) {
+        return ("$c is above freezing temperature");
     }
     else {
-        return (c + " is above freezing temperature");
+        return ("$c is freezing temperature");
     }
 }
 

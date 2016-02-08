@@ -9,7 +9,12 @@
  */
 
 
-function findDuplicates(){
+function findDuplicates($varArray)
+{
+    $temp = array_unique($varArray);//checks for duplicates in an array and deletes them
+    $results = $varArray - $temp;//returns entries from $varArray that are not present in array $temp
+    return $results;
+
 }
 
 

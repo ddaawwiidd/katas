@@ -15,7 +15,18 @@
 
 
 
-function mathTest($number){
+function mathTest($number)
+{
+
+  //checks if number is prime
+    if($number % 2 == 0)
+    {
+        return true;//checks if number is multiple of 2
+    }//checks if number is multiple of 2
+    if($number % 10 == 0)
+    {
+        return true;//checks if number is multiple of 10
+    }
 }
 
 

@@ -9,7 +9,11 @@
 
 
 
-function arrayMean(){
+function arrayMean($varArray)
+{
+    $sumArray = array_sum($varArray);//calculates sum of all array elements
+    $result = $sumArray/count($varArray);
+    return $result;
 }
 
 

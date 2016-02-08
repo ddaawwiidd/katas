@@ -4,14 +4,13 @@
  * Niestety w funkcj są błędy. Napraw je.
  */
 
-function createArray(number){
+function createArray($number){
     $newArray = [];
 
-    for($counter = -1; counter <= number){
-        $counter[i] = $number;
+    for($counter = 1; $counter <= $number; $counter++){
+        array_push($newArray, $counter);
     }
-
-  return $newArray;
+    return $newArray;
 }
 
 /*
@@ -22,7 +21,7 @@ function createArray(number){
 $testCases = [[5, [1,2,3,4,5]], [2,  [1,2]]];
 $results = "";
 foreach($testCases as $case){
-    if(($funcValue = WeatherInfo($case[0])) === $case[1]){
+    if(($funcValue = createArray($case[0])) === $case[1]){
         $results .= "<tr class='success'><td> Ok </td><td> {$case[0]} </td><td>{$case[1]}</td><td>[".implode($funcValue, ",")."]</td></tr>";
     }
     else{
