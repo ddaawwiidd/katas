@@ -10,7 +10,11 @@
 
 
 
-function mostOftenCharacter(){
+function mostOftenCharacter($sentence)
+{
+    //cut white signs from string
+    //turn sentence into array of each character
+    //look for repeating characters
 }
 
 

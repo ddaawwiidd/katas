@@ -10,7 +10,18 @@
 
 
 
-function wordLength(){
+function wordLength($sentence)
+{
+    $temp = explode(' ',$sentence);//puts sentence into array
+    $tempNumber = [];
+    for($i = 0; $i < count($temp); $i++) //count number of letters in word
+    {
+        strlen($temp[$i]);//
+    }
+
+    return //array with added length of words next to words
+
+
 }
 
 

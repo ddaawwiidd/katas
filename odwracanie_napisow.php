@@ -10,7 +10,11 @@
 
 
 
-function wordBackwords(){
+function wordBackwords($sentence)
+{
+    $temp = explode(' ',$sentence);//put sentence in array
+    $reversed = array_reverse($temp,true);//reverse array
+    return implode(' ',$reversed);//returns array as a string
 }
 
 
@@ -18,7 +22,7 @@ function wordBackwords(){
  * Kod popniżej służy wygenerowaniu testów i strony poglądaowej - nie modyfikujcie go!
  */
 
-$testCases = [["", ""],["Ala ma kota", "kota ma Ala"], ["Dlugosc slow nie ma znaczenia",  "znaczenia nie ma slow Dlugosc"], ["Lubie placki 7", "7 placki Lubie"]];
+$testCases = [["", ""],["Ala ma kota", "kota ma Ala"], ["Dlugosc slow nie ma znaczenia",  "znaczenia ma nie slow Dlugosc"], ["Lubie placki 7", "7 placki Lubie"]];
 $results = "";
 foreach($testCases as $case){
     if(($funcValue = wordBackwords($case[0])) === $case[1]){

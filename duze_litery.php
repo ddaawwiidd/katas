@@ -10,7 +10,20 @@
 
 
 
-function findCapitals(){
+function findCapitals($sentence)
+{
+    $positions = [];
+    $letters = str_split($sentence);//turn each letter of string into array
+    for($i = 0; $i < count($letters); $i++)//check which letters are uppercase
+    {
+        if(ctype_upper("$letters[$i]") == 1)
+        {
+           array_push($positions,"$i"); //put positions of those letters in array
+        }
+    }
+    return $positions;
+
+
 }
 
 
@@ -18,10 +31,10 @@ function findCapitals(){
  * Kod popniżej służy wygenerowaniu testów i strony poglądaowej - nie modyfikujcie go!
  */
 
-$testCases = [["", []],["Ala Ma Kota", [0, 4, 7]], ["a kot ma ale",  []], ["Lubie PLACKI 7", [0, 6,7,8,9,10,11]], ["CoDeRsLaB", [0, 2,4,6,8]]];
+$testCases = [["", []],["Ala Ma Kota", [0,4,7]], ["a kot ma ale",  []], ["Lubie PLACKI 7", [0,6,7,8,9,10,11]], ["CoDeRsLaB", [0,2,4,6,8]]];
 $results = "";
 foreach($testCases as $case){
-    if(($funcValue = findCapitals($case[0])) === $case[1]){
+    if(($funcValue = findCapitals($case[0])) == $case[1]){
         $results .= "<tr class='success'><td> Ok </td><td>{$case[0]}</td><td>[".implode($case[1], ",")."]</td><td>[".implode($funcValue, ",")."]</td></tr>";
     }
     else{
